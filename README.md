@@ -144,22 +144,12 @@ The results of the training are listed below.
 |  | `CartpoleEnvironment`  | `HumaniodStandingEnvironment` | `BollaRollaEnvironment` (Balance Ball) |
 | ------------- | ------------- | --------------|:-------------:|
 | **Score vs Episode** | <img src="images/cartpole-train.png" height="240">      |  <img src="images/standing-train.png" height="240">    | <img src="images/balance-ball-train.png" height="240">     |
-| **Demo Video** | <video height="240" controls>
-  <source src="videos/cartpole/simulation.mp4" type="video/mp4">
-</video>      | <video height="240" controls>
-  <source src="videos/standing/simulation.mp4" type="video/mp4">
-</video>     | <video height="240" controls>
-  <source src="videos/rolla/simulation.mp4" type="video/mp4">
-</video>     |
+| **Demo Video** | [![Cartpole](https://img.youtube.com/vi/eHJqaPvVSGI/0.jpg)](https://youtube.com/watch?v=eHJqaPvVSGI)      | [![Standing](https://img.youtube.com/vi/Lvtsslv9ux8/0.jpg)](https://youtube.com/watch?v=Lvtsslv9ux8)     | [![Balance-Beam](https://img.youtube.com/vi/h28sDsKbmcc/0.jpg)](https://youtube.com/watch?v=h28sDsKbmcc)     |
 
 For all three environments, we save the model every 500 episodes. Specifically, for the `HumanoidStandingEnvironment` and the `BollaRollaEnvironment` (Balance Ball), they take more than 500 episodes to finish. As a result, the performance of the saved models is also rendered into video clips, and we provide two videos with rendered saved model performances combined for each environment here.
 
-<video height="240" controls>
-  <source src="videos/standing/output_video.mp4" type="video/mp4">
-</video>
-<video height="240" controls>
-  <source src="videos/rolla/output_video.mp4" type="video/mp4">
-</video>
+[![Standing-Combined](https://img.youtube.com/vi/nT_BC6-7i3I/0.jpg)](https://youtube.com/watch?v=nT_BC6-7i3I)
+[![Balance-Beam-Combined](https://img.youtube.com/vi/730dFGZgQ8o/0.jpg)](https://youtube.com/watch?v=730dFGZgQ8o)
 
 The difficulty of the environments is reflected in the training results. For the `CartpoleEnvironment`, the problem is fully resolved around 450 episodes. In contrast, the `HumanoidStandingEnvironment` is resolved around 2400 episodes, and the `BollaRollaEnvironment` (Balance Ball) took about 15500 episodes to finish. Notably, the last model's performance in the Balance Ball environment is no better than one of the near intermediate models, indicating that the problem is not fully resolved, but the training was terminated due to the termination condition we set.
 
